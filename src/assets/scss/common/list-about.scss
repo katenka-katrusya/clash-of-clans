@@ -1,0 +1,11 @@
+.list-about {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 40px;
+  list-style-type: disc;
+
+  &__item {
+    list-style-type: disc;
+  }
+}
