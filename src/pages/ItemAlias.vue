@@ -10,8 +10,6 @@ const item = computed(() => {
   const alias = route.params.ItemAlias;
   return items.find(el => el.alias === alias);
 });
-
-// console.log(item.value);
 </script>
 
 <template>
@@ -59,5 +57,10 @@ const item = computed(() => {
 .card-stats {
   margin-bottom: 20px;
   border-radius: 14px;
+}
+
+.btnPrimary {
+  background-color: #ec9b3b;
+  border-color: #ec9b3b;
 }
 </style>

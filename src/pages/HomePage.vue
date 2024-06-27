@@ -1,33 +1,43 @@
 <script setup>
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 import Card from '@/components/UI/Card.vue';
 import items from '@/seeders/items.json';
+import CardFooter from '@/pages/CardFooter.vue';
+
+const breakpoints = {
+  300: {
+    itemsToShow: 1,
+  },
+  700: {
+    itemsToShow: 2,
+  }
+};
 
 </script>
 
 <template>
-  <div class="md-body">
-    <div class="card__wrapper"
-         v-for="item in items"
-         :key="item.id">
+  <carousel wrap-around :breakpoints="breakpoints">
+    <slide class="card__wrapper"
+           v-for="item in items"
+           :key="item.id">
       <Card :name="`${item.lvl} lvl`"
             :title="item.title"
-            :imgUrl="item.img" :link="`/${item.alias}`">
+            :imgUrl="item.img" :link="`/${item.alias}`"
+      >
         <template v-slot:body>
           {{ item.desc }}
         </template>
         <template v-slot:footer>
-          <div class="card-stats">
-            <div class="one-third"
-                 v-for="(stat, index) in item.info"
-                 :key="index">
-              <p class="stat">{{stat.title}}</p>
-              <span class="stat-value">{{stat.value}}</span>
-            </div>
-          </div>
+          <CardFooter :item="item"/>
         </template>
       </Card>
-    </div>
-  </div>
+    </slide>
+    <!--  addons  -->
+    <template #addons>
+      <navigation/>
+    </template>
+  </carousel>
 </template>
 
 <style scoped>

@@ -3,16 +3,31 @@
 </script>
 
 <template>
-  <h2 class="title">В этом приложении:</h2>
-  <ul class="list-about">
-    <li class="list-about__item">полная настойка шаблона на Vue CLI;</li>
-    <li class="list-about__item">установка и настройка Vue-router для Vue.js 3;</li>
-    <li class="list-about__item">динамическая перерисовка без перезагрузки страницы;</li>
-    <li class="list-about__item">динамический навбар и ссылки;</li>
-    <li class="list-about__item">обработка несуществующих роутов;</li>
-    <li class="list-about__item">настройка общего конфига.</li>
-  </ul>
+  <div class="md-body">
+    <h1>В этом приложении:</h1>
+    <ul>
+      <li>Vue-Router в связке Vue.js 3</li>
+      <li>Динамические маршруты</li>
+      <li>Установка своих тем поврех своего шаблона vue cli</li>
+      <li>
+        Понимание того, как работают темы для фреймворков по типу Material UI
+      </li>
+      <li>Критерии выбора библиотеки</li>
+      <li>
+        Разбор библиотек и взгляд "изнутри". Полное понимание того, как пишутся
+        библиотеки
+      </li>
+      <li>Слайдер с персонажами</li>
+    </ul>
+    <p>
+      Сделано на курсе
+      <a style="color: #ffffff;" href="https://tocode.ru/courses/vuejs-3-s-nulya-do-rezultata/"
+      >Vue.js 3 С нуля до результата</a
+      >
+    </p>
+  </div>
 </template>
+
 
 <style scoped>
 

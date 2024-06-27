@@ -14,7 +14,9 @@ const title = 'Template';
     <AppHeader />
     <div class="wrapper-content">
       <div class="container">
-        <RouterView />
+        <div class="view-sm isCenter">
+          <RouterView />
+        </div>
       </div>
     </div>
     <AppFooter />
