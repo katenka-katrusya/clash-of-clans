@@ -1,15 +1,21 @@
 <script setup>
 import { computed } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { ROUTERS_PATH } from '@/constants/index.js';
 import items from '@/seeders/items.json';
+import NotFound from '@/pages/NotFound.vue';
 
 const route = useRoute();
+const router = useRouter();
 
 const item = computed(() => {
   const alias = route.params.ItemAlias;
   return items.find(el => el.alias === alias);
 });
+
+if (!item.value) {
+  router.push({name: 'NotFound'});
+}
 </script>
 
 <template>

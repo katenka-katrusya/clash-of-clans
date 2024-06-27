@@ -23,7 +23,7 @@ const router = createRouter({
       path: ROUTERS_PATH.NOT_FOUND,
       name: 'NotFound',
       component: () => import('@/pages/NotFound.vue')
-    },
+    }
   ]
 });
 
